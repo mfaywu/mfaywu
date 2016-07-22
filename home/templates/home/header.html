@@ -41,7 +41,7 @@
 					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT ME</span></a></li>
 					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PROJECTS</span></a></li>
 					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">BLOG</span></a></li>
-					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span> <span class="text">SOMETHING</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span> <span class="text">RESUME</span></a></li>
 					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">FIND ME</span></a></li>
 				</ul>
 				<div class="row">
@@ -52,31 +52,18 @@
 	</div><!-- /.navbar -->
 	
 	
-	<!-- === Arrows === -->
-	<div id="arrows">
-		<div id="arrow-up" class="disabled"></div>
-		<div id="arrow-down"></div>
-		<div id="arrow-left" class="disabled visible-lg"></div>
-		<div id="arrow-right" class="disabled visible-lg"></div>
-	</div><!-- /.arrows -->
-	
-	
 	<!-- === MAIN Background === -->
 	<div class="slide story" id="slide-1" data-slide="1">
-		<div class="container">
+		<div class="container-fluid">
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
-					<h1 class="font-semibold">M Fay Wu</h1>
-					<h4 class="font-thin">Welcome to my <span class="font-semibold">oyster.</span></h4>
+					<h1 class="font-semibold">Ciao, piacere. I'm Fay.</h1>
+					<!--<h4 class="font-thin">Welcome to my <span class="font-semibold">oyster.</span></h4>-->
 					<br>
 					<br>
 				</div><!-- /col-12 -->
 			</div><!-- /row -->
-			<div id="home-row-2" class="row clearfix">
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src="{% static 'home/images/s02.png' %}"></div><span>ABOUT ME</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="{% static 'home/images/s01.png' %}"></div><span>BLOG</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="6"><img src="{% static 'home/images/s03.png' %}"></div><span>GET IN TOUCH</span></div>
-			</div><!-- /row -->
+			<!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide1 -->
 	
@@ -84,7 +71,7 @@
 	<div class="slide story" id="slide-2" data-slide="2">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-thin">Ciao, piacere. <span class="font-semibold">I'm Fay.</span> </div>
+				<div class="col-12 font-thin">Welcome to <span class="font-semibold">my oyster.</span> </div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -176,26 +163,7 @@
 	<!-- === Slide 5 === -->
 	<div class="slide story" id="slide-5" data-slide="5">
 		<div class="container">
-			<div class="row title-row">
-				<div class="col-12 font-thin"><span class="font-semibold">Clients</span> we’ve worked with</div>
-			</div><!-- /row -->
-			<div class="row line-row">
-				<div class="hr">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row content-row">
-				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client01.png' %}" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client02.png' %}" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client03.png' %}" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client04.png' %}" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client05.png' %}" alt=""></div>
-				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
+			<embed src= "{% static 'home/images/mfaywu_resume.pdf' %}"" width=1000px height=600px>
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
 	
@@ -207,12 +175,7 @@
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
-			</div><!-- /row -->
-			<!--<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">You can find us literally anywhere, just push a button and we’re there</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
+			</div>
 			<div id="contact-row-4" class="row">
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
 				<div class="col-12 col-sm-2 with-hover-text">
