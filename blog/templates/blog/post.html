@@ -1,6 +1,9 @@
-{% extends "home/header.html" %}
+{% extends "home/index.html" %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
 {% block content %}
-<h3><a href="/blog/{{post.id}}">{{ post.title }}</a></h3>
 <h5> on {{ post.date_created }} </h6>
 
 <div class = "container">
