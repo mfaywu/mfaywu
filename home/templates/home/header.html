@@ -1,66 +1,272 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>M Fay Wu</title> 
+	<meta name="description" content="BlackTie.co - Free Handsome Bootstrap Themes" />	    
+	<meta name="keywords" content="themes, bootstrap, free, templates, bootstrap 3, freebie,">
+	<meta property="og:title" content="">
 
-<head>
-    <title>Fay Wu</title>
-    <meta charset="utf-8" />
-    {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}" type = "text/css"/>
-    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
-
-    <style type="text/css">
-      html,
-      body {
-         height:100%
-      }
-    </style
+	<link rel="stylesheet" href="{% static 'home/fancybox/jquery.fancybox-v=2.1.5.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}">	
+	
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	
+	<link rel="prefetch" href="{% static 'home/images/zoom.png' %}">
+		
 </head>
 
-<body class="body" style="background-color:#bf00ff">
-    <div class="container-fluid" style="min-height:95%; ">
-      <div class="row">
-	<div class="col-sm-2">
-	  <br>
-	  <center>
-	    <img src="{% static 'home/img/profile.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
-	  </center>
-	</div>
-	<div class="col-sm-10">
-	  <br>
-	  <center>
-	    <h3>Welcome to My Oyster</h3>
-	    </center>
-	  </div>
-	</div><hr>
-
-      <div class="row">
-	<div class="col-sm-2">
-	  <br>
-
-	  <br>
-	  <div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
-	    <ul class="nav nav-pills nav-stacked">
-	      <li><a href='/'>Home</a></li>
-	      <li><a href='/blog/'>Blog</a></li>
-	      <li><a href='/contact/'>Contact</a></li>
-	    </ul>
-	  </div> 
-	</div>
-	<div class="col-sm-10">
-
-	  <div class='container-fuild'>
-	    <br><br>
-	    {% block content %}
-	    {% endblock %}
-	  </div>
-	</div>
-      </div>
-    </div>
-    <footer>
-      <div class="container-fluid" style='margin-left:15px'>
-	<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
-      </div>
-    </footer>
+<body>
+	<div class="navbar navbar-fixed-top" data-activeslide="1">
+		<div class="container">
+		
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			
+			<div class=" in">
+				<ul class="nav row">
+					<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
+					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT ME</span></a></li>
+					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PROJECTS</span></a></li>
+					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">BLOG</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-heart"></span> <span class="text">SOMETHING</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">FIND ME</span></a></li>
+				</ul>
+				<div class="row">
+					<div class="col-sm-2 active-menu"></div>
+				</div>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+	
+	
+	<!-- === Arrows === -->
+	<div id="arrows">
+		<div id="arrow-up" class="disabled"></div>
+		<div id="arrow-down"></div>
+		<div id="arrow-left" class="disabled visible-lg"></div>
+		<div id="arrow-right" class="disabled visible-lg"></div>
+	</div><!-- /.arrows -->
+	
+	
+	<!-- === MAIN Background === -->
+	<div class="slide story" id="slide-1" data-slide="1">
+		<div class="container">
+			<div id="home-row-1" class="row clearfix">
+				<div class="col-12">
+					<h1 class="font-semibold">M Fay Wu</h1>
+					<h4 class="font-thin">Welcome to my <span class="font-semibold">oyster.</span></h4>
+					<br>
+					<br>
+				</div><!-- /col-12 -->
+			</div><!-- /row -->
+			<div id="home-row-2" class="row clearfix">
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src="{% static 'home/images/s02.png' %}"></div><span>ABOUT ME</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="{% static 'home/images/s01.png' %}"></div><span>BLOG</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="6"><img src="{% static 'home/images/s03.png' %}"></div><span>GET IN TOUCH</span></div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide1 -->
+	
+	<!-- === Slide 2 === -->
+	<div class="slide story" id="slide-2" data-slide="2">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin">Ciao, piacere. <span class="font-semibold">I'm Fay.</span> </div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-12 font-thin">I like <span class="font-semibold">making things.</span> I'm an <span class="font-semibold">almost-grad</span> @UCLA computer science, currently <span class="font-semibold">interning</span> @Microsoft <span class="font-semibold">Analysis & Experimentation.</span></div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-food"></i></p>
+					<h2 class="font-thin">Oyster <span class="font-semibold">Lover</span></h2>
+					<!--<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>-->
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-plane"></i></p>
+					<h2 class="font-thin">Global <span class="font-semibold">Traveller</span></h2>
+					<!--<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>-->
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-beaker"></i></p>
+					<h2 class="font-thin">Self <span class="font-semibold">Experimenter</span></h2>
+					<!--<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>-->
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-book"></i></p>
+					<h2 class="font-thin">Book <span class="font-semibold">Enthusiast</span></h2>
+					<!--<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>-->
+				</div><!-- /col12 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide2 -->
+	
+	<!-- === SLide 3 - Portfolio -->
+	<div class="slide story" id="slide-3" data-slide="3">
+		<div class="row">
+			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href=""><img class="thumb" src="" alt=""></a></div>
+		</div><!-- /row -->
+	</div><!-- /slide3 -->
+	
+	<!-- === Slide 4 - Process === -->
+	<div class="slide story" id="slide-4" data-slide="4">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin">{% block title %} {% endblock %}</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-10 font-light">
+				    {% block content %}
+				    {% endblock %}
+				</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-bolt"></i></p>
+					<h2 class="font-thin">Listening to<br><span class="font-semibold" >your needs</span></h2>
+					<h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-cog"></i></p>
+					<h2 class="font-thin">Project<br><span class="font-semibold">discovery</span></h2>
+					<h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-cloud"></i></p>
+					<h2 class="font-thin">Storming<br><span class="font-semibold">our brains</span></h2>
+					<h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-map-marker"></i></p>
+					<h2 class="font-thin">Getting<br><span class="font-semibold">there</span></h2>
+					<h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2">
+					<p><i class="icon icon-gift"></i></p>
+					<h2 class="font-thin">Delivering<br><span class="font-semibold">the product</span></h2>
+					<h4 class="font-thin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+				</div><!-- /col12 -->
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide4 -->
+	
+	<!-- === Slide 5 === -->
+	<div class="slide story" id="slide-5" data-slide="5">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin"><span class="font-semibold">Clients</span> we’ve worked with</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client01.png' %}" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client02.png' %}" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client03.png' %}" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client04.png' %}" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="{% static 'home/images/client05.png' %}" alt=""></div>
+				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide5 -->
+	
+	<!-- === Slide 6 / Contact === -->
+	<div class="slide story" id="slide-6" data-slide="6">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-light">Find <span class="font-semibold">me!</span></div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<!--<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-10 font-light">You can find us literally anywhere, just push a button and we’re there</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+			<div id="contact-row-4" class="row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="http://www.github.com/mfaywu"><i class="icon icon-github"></i></a></p>
+					<span class="hover-text font-light ">mfaywu</span></a>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="mailto:mfaywu@ucla.edu"><i class="icon icon-envelope"></i></a></p>
+					<span class="hover-text font-light ">mfaywu@ucla.edu</span></a>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="#"><i class="icon icon-home"></i></a></p>
+					<span class="hover-text font-light ">Seattle, WA<br>98101</span></a>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="http://www.facebook.com/mfaywu"><i class="icon icon-facebook"></i></a></p>
+					<span class="hover-text font-light ">facebook/mfaywu</span></a>
+				</div><!-- /col12 -->
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="http://www.linkedin.com/in/mfaywu"><i class="icon icon-linkedin"></i></a></p>
+					<span class="hover-text font-light ">mfaywu</span></a>
+				</div><!-- /col12 -->
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /Slide 6 -->
+	
 </body>
+
+	<!-- SCRIPTS -->
+	<script src="{% static 'home/js/html5shiv.js' %}"></script>
+	<script src="{% static 'home/js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'home/js/jquery-migrate-1.2.1.min.js' %}"></script>
+	<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'home/js/jquery.easing.1.3.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/fancybox/jquery.fancybox.pack-v=2.1.5.js' %}"></script>
+	<script src="{% static 'home/js/script.js' %}"></script>
+	
+	<!-- fancybox init -->
+	<script>
+	$(document).ready(function(e) {
+		var lis = $('.nav > li');
+		menu_focus( lis[0], 1 );
+		
+		$(".fancybox").fancybox({
+			padding: 10,
+			helpers: {
+				overlay: {
+					locked: false
+				}
+			}
+		});
+	
+	});
+	</script>
 
 </html>
